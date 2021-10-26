@@ -1,0 +1,209 @@
+<html>
+<head>
+	<title>mera bharat</title>
+	<script src="jquery-3.6.0.min.js"></script>
+
+	<style>
+		header{
+			width:100%;
+			height:100vh;
+			background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('taz.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		nav{
+			width:100%;
+			height:15vh;
+			background:rgba(0,0,0,0.2);
+			color:white;
+			display:flex;
+			justify-content:space-between;
+			align-items: center;
+
+		}
+		nav .logo{
+			width:25%;
+			text-align:center;
+		
+		}
+		nav .menu{
+			width:40%;
+		
+			display:flex;
+			justify-content: space-around;
+
+		}
+		nav .menu a{
+			width:25%;
+			text-decoration:none;
+			color:white;
+			font-weight:bold;
+		}
+		/*nav .menu a:first-child{
+			color:#00b894;
+		}*/
+		main{
+			width:100%;
+			height:85vh;
+			display:flex;
+			justify-content: center;
+			align-items:center;
+			text-align:center;
+			color:white;
+		}
+		section{
+
+		}
+		section h3{
+			font-size: 35px;
+			font-family:impact;		
+			font-weight:200;
+			letter-spacing: 3px;
+			text-shadow:1px 2px 2px black;
+
+		}
+		section h1{
+			 
+            font-size: 55px;
+				
+			font-weight:700;
+			letter-spacing: 3px;
+			text-shadow:2px 1px 5px black;
+
+		}
+		section p{
+			font-size: 25px;
+
+			margin-bottom:25px;
+			word-spacing: 3px;
+			text-shadow:1px 1px 1px black;
+
+		}
+		section a{
+			padding: 12px 30px;
+			border-radius: 4px;
+			outline: none;
+			text-transform: uppercase;
+			font-size: 13px;
+			font-weight: 500;
+			text-decoration: none;
+			letter-spacing: 1px;
+		}
+		section .btnone{
+			 background:white;
+			 color:black;
+		}
+		section .btntwo{
+			 background:#00b894;
+			 color:black;
+		}
+		.change_content:after{
+			content:'';
+			animation:changetext 10s infinite linear;
+			color:00b894;
+		}
+		@keyframes changetext{
+			0%{content:"muzaffarnagar";}
+			20%{content:"noida";}
+			35%{content:"delhi";}
+			45%{content:"thana bhawan";}
+			65%{content:"shamli";}
+			85%{content:"agra";}
+			95%{content:"ambala";}
+			100%{content:"deoband";}
+
+
+
+	
+
+		}
+		#popupmain_div{
+			position:fixed;
+			width:100%;
+			height:100%;
+			background:rgba(255,255,255,0.6)
+			z-index: 1001;
+		}
+		#pop_up{
+			width:500px;
+			height:250px;
+			background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('boot4.jpg');
+			background-size: cover;
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			box-shadow: 1px 2px 5px 3px black;
+		}
+		#new_heading{
+			transform: translate(90px);
+			color:white;
+
+		}
+		#email_id{
+			width:60%;
+			padding:10px;
+			margin-left: 90px;
+			border:1px solid black;
+			border-radius: 12px;
+		}
+		#submitid{
+		  background-color: #0fc0fa;
+		  border:1px solid white;
+		  border-radius: 10px;
+		  font-size: 1rem;
+		  padding:0.6rem;
+		  color:white;
+		  transform: translate(90%);
+		  margin: 10px;
+
+		}
+	</style>
+	</head>
+	<body>
+			<div id="popupmain_div">
+		<div id="pop_up">
+			<h1 id="new_heading">subscribe to new letter</h1>
+			<input type="email" name="" id="email_id" placeholder="user@email.com">
+			<br><br><br>
+			<button id="submitid">SUBSCRIBE</button>
+			<button id="submitid">NO THANKS</button>
+
+			
+		</div>
+	</div>
+		<header class="headers" >
+		
+			<nav>
+				<div class="logo"><h1 class="">mera bharat</h1></div>
+				<div class="menu">
+					<a href="#">HOME</a>
+					<a href="#">GALLERY</a>
+					<a href="#">CONTACT</a>
+					<a href="#">ABOUT</a>
+				</div>
+			</nav>
+				<main>
+					<section>
+						<h3>WELCOME TO INDIA</h3>
+						<h1>TO COME VISIT<span class="change_content"></span></h1>
+						<p>"India is not a enough"</p>
+						<a href="#" class="btnone">learn more</a>
+						<a href="#" class="btntwo">Signup here</a>
+
+
+					</section>
+				</main>
+		
+		</header>
+		<script>
+			$(document).ready(function(){
+				setTimeout(function(){
+                   $('#popupmain_div').css('display','none')
+				},3000);
+			});
+				
+		</script>
+		
+	</body>
+</html>
